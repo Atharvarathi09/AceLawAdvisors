@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Law Advisors | Excellence in Justice</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ace-navy': '#0f172a',
+                        'ace-gold': '#c5a059',
+                        'ace-gold-hover': '#b08d4b',
+                        'ace-light': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for specific visual flair */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-bg {
+            background-color: #0f172a; /* This is the exact Navy from the header */
+            /* Optional: Add a subtle radial gradient to make it look premium, not flat */
+            background-image: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #c5a059;
+            bottom: -10px;
+            left: 0;
+            transition: width 0.3s;
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-scale-balanced text-ace-gold text-3xl mr-2"></i>
+                    <div>
+                        <span class="font-serif text-2xl font-bold text-white tracking-wide">ACE LAW</span>
+                        <span class="block text-xs text-ace-gold uppercase tracking-widest">Advisors</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-ace-gold transition-colors text-sm uppercase tracking-wide font-semibold">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-ace-gold transition-colors text-sm uppercase tracking-wide font-semibold">About Firm</a>
+                    <a href="#services" class="text-gray-300 hover:text-ace-gold transition-colors text-sm uppercase tracking-wide font-semibold">Practice Areas</a>
+                    <a href="#contact" class="px-6 py-2 border border-ace-gold text-ace-gold hover:bg-ace-gold hover:text-white transition-all duration-300 rounded-sm uppercase text-xs font-bold tracking-widest">
+                        Free Consultation
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-ace-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-ace-navy border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-white hover:text-ace-gold">Home</a>
+                <a href="#about" class="block px-3 py-2 text-white hover:text-ace-gold">About</a>
+                <a href="#services" class="block px-3 py-2 text-white hover:text-ace-gold">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-ace-gold font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="text-center px-4 max-w-5xl mx-auto">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="text-ace-gold uppercase tracking-[0.3em] text-sm font-bold mb-4 block">Chattisgarh's first full-service law firm</span>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                    Clarity | Strategy | Execution <br>
+                   
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                    Ace Law Advisors combines big-firm expertise with small-firm attention. <br>Your fight is our fight.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#contact" class="px-8 py-4 bg-ace-gold text-white rounded-sm font-bold uppercase tracking-widest hover:bg-ace-gold-hover transition-all transform hover:-translate-y-1 shadow-lg">
+                        Schedule Consultation
+                    </a>
+                    <a href="#services" class="px-8 py-4 bg-transparent border border-white text-white rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-ace-navy transition-all transform hover:-translate-y-1">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white hover:text-ace-gold transition-colors">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-ace-gold/20 z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Meeting Room" 
+                         class="relative z-10 w-full h-auto shadow-2xl rounded-sm object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-ace-navy z-0 hidden md:block"></div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h4 class="text-ace-gold font-bold uppercase tracking-widest text-sm mb-2">About Our Firm</h4>
+                    <h2 class="text-4xl font-serif font-bold text-ace-navy mb-6 gold-underline">Chattisgarh's Trusted Legal Advisors</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Ace Law Advisors is a full-service law firm providing comprehensive legal advisory across corporate, regulatory, litigation, and real estate matters.
+<br>
+We advise businesses, promoters, institutions, and individuals with a solutions-driven approach that combines legal precision with commercial understanding. Our firm is built on the principle of delivering clear, practical, and outcome-oriented counsel across the lifecycle of legal and business challenges.
+<br>
+With a multidisciplinary team and a collaborative approach, we serve as trusted legal advisors to clients across Chhattisgarh and beyond.
+                    </p>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-ace-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h4 class="text-ace-gold font-bold uppercase tracking-widest text-sm mb-2">Practice Areas</h4>
+                <h2 class="text-4xl font-serif font-bold text-ace-navy">How We Can Help</h2>
+                <div class="w-16 h-1 bg-ace-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">Corporate Law & Advisory</h3>
+                    <p class="text-gray-600 mb-4">Strategic advisory on mergers, acquisitions, fund formation, corporate restructuring, governance, and fundraising.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">White Collar & Economic Offences</h3>
+                    <p class="text-gray-600 mb-4">Defence and advisory in white-collar crimes, regulatory investigations, and economic offences.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">Real Estate</h3>
+                    <p class="text-gray-600 mb-4">Defence and advisory for complex real estate laws, zoning disputes, and commercial real estate transactions.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+                
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-heart-crack"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">Family Law</h3>
+                    <p class="text-gray-600 mb-4">Counsel for divorce, custody battles, and estate planning matters.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">Litigation</h3>
+                    <p class="text-gray-600 mb-4">Representing clients in complex civil and criminal litigation.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-b-4 border-transparent hover:border-ace-gold group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-ace-navy text-ace-gold flex items-center justify-center text-2xl mb-6 rounded-sm group-hover:bg-ace-gold group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-copyright"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-ace-navy mb-3">Intellectual Property</h3>
+                    <p class="text-gray-600 mb-4">Protecting your ideas, trademarks, and patents in an increasingly digital world.</p>
+                    <a href="#" class="text-ace-gold font-bold uppercase text-xs tracking-widest hover:text-ace-navy">Learn More <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-ace-navy relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-ace-gold opacity-10"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-ace-gold opacity-10"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl font-serif font-bold text-white mb-6" data-aos="fade-up">Why Choose Ace Law Advisors?</h2>
+            <p class="text-gray-300 text-lg mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+                We combine big-firm expertise with small-firm attention. Our attorneys are accessible, responsive, and fiercely dedicated to your success. With a track record of landmark victories, we bring clarity, strategy, and execution to every case we handle.
+            </p>
+            <div data-aos="zoom-in" data-aos-delay="200">
+                <a href="tel:+918819819819" class="inline-flex items-center text-3xl font-serif font-bold text-ace-gold hover:text-white transition-colors">
+                    <i class="fa-solid fa-phone mr-3"></i> +91 8 819 819 819
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div data-aos="fade-right">
+                    <h4 class="text-ace-gold font-bold uppercase tracking-widest text-sm mb-2">Get in Touch</h4>
+                    <h2 class="text-4xl font-serif font-bold text-ace-navy mb-6">Let's Discuss Your Case</h2>
+                    <p class="text-gray-600 mb-8">
+                        Fill out the form to schedule your free confidential consultation. Our team will review your case and get back to you within 24 hours.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-ace-navy text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-lg font-bold text-ace-navy">Headquarters</h5>
+                                <p class="text-gray-600"> Ajmera Treon, Bhakti Park, Wadala <br>Mumbai, MH, 400037.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-ace-navy text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-lg font-bold text-ace-navy">Email Us</h5>
+                                <p class="text-gray-600">vedant@acelawadvisors.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-ace-navy text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="text-lg font-bold text-ace-navy">Office Hours</h5>
+                                <p class="text-gray-600">Mon - Fri: 8:00 AM - 8:00 PM<br>Sat - Sun: By Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-sm shadow-lg border-t-4 border-ace-gold" data-aos="fade-left">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-ace-gold focus:ring-1 focus:ring-ace-gold transition-all" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-ace-gold focus:ring-1 focus:ring-ace-gold transition-all" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-ace-gold focus:ring-1 focus:ring-ace-gold transition-all" placeholder="john@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Practice Area</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-ace-gold focus:ring-1 focus:ring-ace-gold transition-all text-gray-600">
+                                <option>Corporate Law & Advisory</option>
+                                <option>White Collar & Economic Offences.</option>
+                                <option>Family Law</option>
+                                <option>Real Estate</option>
+                                <option>Litigation</option>
+                                <option>Intellectual Property</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-ace-gold focus:ring-1 focus:ring-ace-gold transition-all" placeholder="Briefly describe your legal issue..."></textarea>
+                        </div>
+
+                        <button type="button" class="w-full bg-ace-navy text-white font-bold uppercase tracking-widest py-4 rounded-sm hover:bg-ace-gold transition-colors duration-300">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-scale-balanced text-ace-gold text-2xl mr-2"></i>
+                        <span class="font-serif text-xl font-bold">ACE LAW</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We combine big-firm expertise with small-firm attention. Your fight is our fight.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-ace-gold transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-ace-gold transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-ace-gold transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-ace-gold font-bold uppercase tracking-widest text-xs mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Practice Areas</a></li>
+                        <li><a href="#attorneys" class="hover:text-white transition-colors">Our Attorneys</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-ace-gold font-bold uppercase tracking-widest text-xs mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-ace-gold font-bold uppercase tracking-widest text-xs mb-4">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for legal updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email" class="bg-slate-800 text-white px-3 py-2 w-full text-sm focus:outline-none border border-slate-700 focus:border-ace-gold">
+                        <button class="bg-ace-gold px-4 py-2 text-white hover:bg-white hover:text-ace-navy transition-colors">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                &copy; 2023 Ace Law Advisors. All Rights Reserved. Attorney Advertising.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
+
+        // Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Hide menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect (Optional transparency logic)
+        // Since we used glassmorphism in CSS, we can stick to that, 
+        // but let's add a solid background on deep scroll if desired.
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
